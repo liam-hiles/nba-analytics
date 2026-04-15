@@ -56,8 +56,6 @@ passes <- attacking_influence %>%
 
 ## Data Vis ----
 
-
-
 map_shot <- ggplot(data = shots) +
   annotate_pitch(dimensions = pitch_statsbomb, colour = 'white', fill = 'darkgreen') +
   theme_pitch() +
