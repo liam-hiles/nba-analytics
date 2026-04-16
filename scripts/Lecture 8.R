@@ -80,3 +80,8 @@ write_csv(nba_team_stats, "data/nba_2024_team_stats.csv")
 saveRDS(nba_player_stats, "data/nba_2024_player_stats.rds")
 write_csv(nba_player_stats, "data/nba_2024_player_stats.csv")
 
+### Reading Data ----
+stats_team <- read_rds("C:/Users/liamh/OneDrive/Documents/Uni Folder/ULMS744/nba-analytics/data/nba_2024_team_stats.rds")
+stats_player <- read_rds("C:/Users/liamh/OneDrive/Documents/Uni Folder/ULMS744/nba-analytics/data/nba_2024_player_stats.rds")
+
+

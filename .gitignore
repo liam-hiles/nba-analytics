@@ -7,3 +7,5 @@ Thumbs.db
 *.zip
 *.gz
 .Rproj.user
+
+data/Raw
