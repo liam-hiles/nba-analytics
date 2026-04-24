@@ -4,6 +4,7 @@ library(StatsBombR)
 library(tidyverse)
 library(ggsoccer)
 library(ggplot2)
+library(shinylive)
 
 ## Data Wrangling ----
 
@@ -16,8 +17,8 @@ matches <- FreeMatches(Competitions = wc)
 
 events <- free_allevents(MatchesDF = matches)
 events <- allclean(events)
-unique(events$type.name)
-glimpse(events)
+#unique(events$type.name)
+#glimpse(events)
 
 ## Data Cleaning + Prep ----
 
@@ -28,13 +29,15 @@ pass_shot_uc <- events %>%
          type.name, under_pressure, TimeInPoss, play_pattern.name, 
          starts_with('pass'), starts_with('shot'))
 
-glimpse(pass_shot_uc)
+#glimpse(pass_shot_uc)
 
 
 attacking_influence <- pass_shot_uc %>% 
   filter(player.name == 'Antoine Griezmann')
 
-glimpse(attacking_influence)
+#glimpse(attacking_influence)
+
+saveRDS(attacking_influence, 'data/cleaned/attacking_influence.rds')
 
 shots <- attacking_influence %>% 
   filter(type.name == 'Shot')
